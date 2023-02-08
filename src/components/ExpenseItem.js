@@ -1,12 +1,12 @@
 import { directive } from "@babel/types";
 import "./ExpenseItem.css";
-function ExpenseItem() {
+function ExpenseItem(props) {
   return (
     <div className="expense-item">
-      <div> Sep 9th 2023</div>
+      <div>{props.date.toString()}</div>
       <div className="expense-item__discription">
-        <h2>Buy cheese</h2>
-        <div className="expense-item__prize">526.35</div>
+        <h2>{props.title}</h2>
+        <div className="expense-item__prize">{props.amount}</div>
       </div>
     </div>
   );
